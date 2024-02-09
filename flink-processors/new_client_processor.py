@@ -110,3 +110,30 @@ if __name__ == '__main__':
     env.add_jars("file:///home/byoct1/projects/flink/flink-sql-connector-kafka-3.0.2-1.18.jar")
     print("start reading data from kafka")
     read_from_kafka(env)
+
+
+
+# if user_id in current_state_value:
+        #     current_state_value[user_id].update({
+        #         'phone': user_infodata['phone'],
+        #         'address': user_infodata['address'],
+        #         'country': user_infodata['country'],
+        #         'city': user_infodata['city']
+        #     })
+            
+        #     state.update(json.dumps(current_state_value))
+
+    # Check if it's an account creation event
+    # elif source_table == 'accounts' and event_data['payload']['op'] == 'c':
+    #     print("new message account insert: :)")
+    #     # Retrieve the user data from the state
+    #     account_data = event_data['payload']['after']
+    #     user_id = account_data['user_id']
+    #     current_state_value = json.loads(state.value())
+    #     if user_id in current_state_value:
+    #         current_state_value[user_id].update({
+    #             'amount': account_data['amount']
+    #         })
+    #         print(current_state_value[user_id])
+    #         # Clear the state for this user since we have processed their account
+    #         state.clear()
